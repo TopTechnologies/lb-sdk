@@ -1,14 +1,21 @@
 {
   "name": "my-loopback-sdk-builder",
-  "version": "2.3.1",
+  "version": "2.4.1",
   "description": "Tool for auto-generating Software Development Kits (SDKs) for LoopBack",
+  "publishConfig": {
+    "access": "public",
+    "branches": [
+      "master"
+    ]
+  },
   "bin": {
     "lb-sdk": "bin/lb-sdk"
   },
   "main": "index.js",
   "scripts": {
     "prepublish": "",
-    "test": "npm run load:api & npm run test:all",
+    "test": "echo \"Error: no test specified\" || exit 0",
+    "_test": "npm run load:api & npm run test:all",
     "pretest": "cd tests/fireloop && npm install && npm install ../../ && npm run build:sdk",
     "pretest:ng2webORM": "cd tests/fireloop && npm run build:sdk:ng2webORM",
     "pretest:ng2webNGRX": "cd tests/fireloop && npm run build:sdk:ng2webNGRX",
@@ -21,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TopTechnologies/loopback-sdk-builder.git"
+    "url": "https://github.com/TopTechnologies/lb-sdk.git"
   },
   "keywords": [
     "loopback",
