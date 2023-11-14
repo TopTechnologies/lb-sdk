@@ -69,11 +69,11 @@ export class SocketConnection {
    * This method will create a new socket connection when not previously established.
    * If there is a broken connection it will re-connect.
    **/
-  public connect(token: AccessToken = null): void {
+  public connect(token: AccessToken = null, options?: any): void {
     if (!this.socket) {
-      console.info('Creating a new connection with: ', LoopBackConfig.getPath());
+      console.info('Creating a new connection with: ', options?.path ?? LoopBackConfig.getPath());
       // Create new socket connection
-      this.socket = this.driver.connect(LoopBackConfig.getPath(), {
+      this.socket = this.driver.connect(options?.path ?? LoopBackConfig.getPath(), {
         log: false,
         secure: LoopBackConfig.isSecureWebSocketsSet(),
         forceNew: true,
