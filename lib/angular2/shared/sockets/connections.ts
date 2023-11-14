@@ -71,9 +71,9 @@ export class SocketConnection {
    **/
   public connect(token: AccessToken = null, options?: any): void {
     if (!this.socket) {
-      console.info('Creating a new connection with: ', options?.path ?? LoopBackConfig.getPath());
+      console.info('Creating a new connection with: ', options && options.path ? options.path : LoopBackConfig.getPath());
       // Create new socket connection
-      this.socket = this.driver.connect(options?.path ?? LoopBackConfig.getPath(), {
+      this.socket = this.driver.connect(options && options.path ? options.path : LoopBackConfig.getPath(), {
         log: false,
         secure: LoopBackConfig.isSecureWebSocketsSet(),
         forceNew: true,
