@@ -1,13 +1,11 @@
 declare var Zone: any;
 import { Injectable } from '@angular/core';
 /**
-* @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>
-* @module CookieNode
-* @license MIT
-* @description
-* This module handle cookies, it will be provided using DI Swapping according the
-* SDK Socket Driver Available currently supporting Angular 2 for web and NativeScript 2.
-**/
+ * @module CookieNode
+ * @description
+ * This module handle cookies, it will be provided using DI Swapping according the
+ * SDK Socket Driver Available currently supporting Angular 2 for web and NativeScript 2.
+ **/
 @Injectable()
 export class CookieNode {
   /**
@@ -21,6 +19,7 @@ export class CookieNode {
     let cookies: { [key: string]: number } = Zone.current.get('req').cookies;
     return cookies[key];
   }
+
   /**
    * @method set
    * @param {string} key Cookie key name
@@ -33,6 +32,7 @@ export class CookieNode {
   set(key: string, value: any): any {
     Zone.current.get('res').cookies(key, value).send('Cookie is set');
   }
+
   /**
    * @method remove
    * @param {string} key Cookie key name

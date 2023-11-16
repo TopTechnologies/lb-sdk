@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
+
 /**
-* @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>
-* @module StorageBrowser
-* @license MIT
-* @description
-* This module handle localStorage, it will be provided using DI Swapping according the
-* SDK Socket Driver Available currently supporting Angular 2 for web and NativeScript 2.
-**/
+ * @module StorageBrowser
+ * @description
+ * This module handle localStorage, it will be provided using DI Swapping according the
+ * SDK Socket Driver Available currently supporting Angular 2 for web and NativeScript 2.
+ **/
 @Injectable()
 export class StorageBrowser {
   /**
@@ -20,6 +19,7 @@ export class StorageBrowser {
     let data: string = localStorage.getItem(key);
     return this.parse(data);
   }
+
   /**
    * @method set
    * @param {string} key Storage key name
@@ -34,6 +34,7 @@ export class StorageBrowser {
       typeof value === 'object' ? JSON.stringify(value) : value
     );
   }
+
   /**
    * @method remove
    * @param {string} key Storage key name
@@ -48,6 +49,7 @@ export class StorageBrowser {
       console.log('Trying to remove unexisting key: ', key);
     }
   }
+
   /**
    * @method parse
    * @param {any} value Input data expected to be JSON

@@ -1,13 +1,12 @@
 import * as io from 'socket.io-client';
+
 /**
-* @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>
-* @module SocketBrowser
-* @license MIT
-* @description
-* This module handle socket connections for web browsers, it will be DI Swapped
-* depending on the platform environment.
-* This module will be generated when the -d ng2web flag is set
-**/
+ * @module SocketBrowser
+ * @description
+ * This module handle socket connections for web browsers, it will be DI Swapped
+ * depending on the platform environment.
+ * This module will be generated when the -d ng2web flag is set
+ **/
 export class SocketBrowser {
   /**
    * @method connect

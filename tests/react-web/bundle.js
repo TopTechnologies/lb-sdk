@@ -23664,7 +23664,7 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	/**
-	 * @module Storage
+	 * @module Storage
 	 * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
 	 * @license MIT
 	 * @description
@@ -23716,7 +23716,7 @@
 	}();
 
 	/**
-	 * @module InternalStorage
+	 * @module InternalStorage
 	 * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
 	 * @license MIT
 	 * @description
@@ -23739,7 +23739,7 @@
 	  return InternalStorage;
 	}(BaseStorage);
 	/**
-	 * @module SDKStorage
+	 * @module SDKStorage
 	 * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
 	 * @license MIT
 	 * @description

@@ -4,10 +4,9 @@ import { AccessToken } from '../models';
 import { Observable, Subject } from 'rxjs';
 import { share } from 'rxjs/operators';
 import { LoopBackConfig } from '../lb.config';
+
 /**
-* @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>
 * @module SocketConnection
-* @license MIT
 * @description
 * This module handle socket connections and return singleton instances for each
 * connection, it will use the SDK Socket Driver Available currently supporting

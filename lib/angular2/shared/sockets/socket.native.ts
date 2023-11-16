@@ -1,13 +1,12 @@
 import * as SocketIO from 'nativescript-socket.io';
+
 /**
-* @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>
-* @module SocketNative
-* @license MIT
-* @description
-* This module handle socket connections for nativescript apps, it will be DI Swapped
-* depending on the platform environment.
-* This module will be generated when the -d ng2native flag is set.
-**/
+ * @module SocketNative
+ * @description
+ * This module handle socket connections for nativescript apps, it will be DI Swapped
+ * depending on the platform environment.
+ * This module will be generated when the -d ng2native flag is set.
+ **/
 export class SocketNative {
   /**
    * @method connect

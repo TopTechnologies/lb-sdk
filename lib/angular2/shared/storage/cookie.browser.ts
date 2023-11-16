@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
 export interface CookieInterface { [key: string]: any }
+
 /**
-* @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>
-* @module CookieBrowser
-* @license MIT
-* @description
-* This module handle cookies, it will be provided using DI Swapping according the
-* SDK Socket Driver Available currently supporting Angular 2 for web and NativeScript 2.
-**/
+ * @description
+ * This module handle cookies, it will be provided using DI Swapping according the
+ * SDK Socket Driver Available currently supporting Angular 2 for web and NativeScript 2.
+ **/
 @Injectable()
 export class CookieBrowser {
   /**
    * @type {CookieInterface}
    **/
   private cookies: CookieInterface = {};
+
   /**
    * @method get
    * @param {string} key Cookie key name
@@ -35,6 +34,7 @@ export class CookieBrowser {
 
     return this.cookies[key];
   }
+
   /**
    * @method set
    * @param {string} key Cookie key name
@@ -49,6 +49,7 @@ export class CookieBrowser {
     let cookie = `${key}=${encodeURI(value)}; path=/${expires ? `; expires=${ expires.toUTCString() }` : ''}`;
     window.document.cookie = cookie;
   }
+
   /**
    * @method remove
    * @param {string} key Cookie key name
@@ -60,6 +61,7 @@ export class CookieBrowser {
     document.cookie = key + '=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     delete this.cookies[key];
   }
+
   /**
    * @method parse
    * @param {any} value Input data expected to be JSON

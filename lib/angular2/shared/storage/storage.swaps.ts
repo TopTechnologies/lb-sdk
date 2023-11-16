@@ -1,7 +1,5 @@
 /**
- * @module Storage
- * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
- * @license MIT
+ * @module Storage
  * @description
  * The InternalStorage class is used for dependency injection swapping.
  * It will be provided using factory method from different sources.
@@ -15,6 +13,7 @@ export class BaseStorage {
    * The getter will return any type of data persisted in storage.
    **/
   get(key: string): any {}
+
   /**
    * @method set
    * @param {string} key Storage key name
@@ -24,6 +23,7 @@ export class BaseStorage {
    * The setter will return any type of data persisted in localStorage.
    **/
   set(key: string, value: any, expires?: Date): void {}
+
   /**
    * @method remove
    * @param {string} key Storage key name
@@ -33,10 +33,9 @@ export class BaseStorage {
    **/
   remove(key: string): void {}
 }
+
 /**
- * @module InternalStorage
- * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
- * @license MIT
+ * @module InternalStorage
  * @description
  * The InternalStorage class is used for dependency injection swapping.
  * It will be provided using factory method from different sources.
@@ -44,10 +43,9 @@ export class BaseStorage {
  * It does inject a CookieStorage instead of LocalStorage.
  **/
 export class InternalStorage extends BaseStorage {}
+
 /**
- * @module SDKStorage
- * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
- * @license MIT
+ * @module SDKStorage
  * @description
  * The SDKStorage class is used for dependency injection swapping.
  * It will be provided using factory method according the right environment.
