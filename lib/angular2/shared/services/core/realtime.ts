@@ -1,4 +1,3 @@
-/* tslint:disable */
 import { Injectable, Inject } from '@angular/core';
 import { IO } from './io.service';
 import { LoopBackAuth } from './auth.service';

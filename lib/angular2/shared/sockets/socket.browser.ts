@@ -1,4 +1,3 @@
-/* tslint:disable */
 import * as io from 'socket.io-client';
 /**
 * @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>

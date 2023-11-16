@@ -1,4 +1,3 @@
-/* tslint:disable */
 import { Injectable, Inject, NgZone } from '@angular/core';
 import { SocketDriver } from './socket.driver';
 import { AccessToken } from '../models';

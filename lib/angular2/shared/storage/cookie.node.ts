@@ -1,4 +1,3 @@
-/* tslint:disable */
 declare var Zone: any;
 import { Injectable } from '@angular/core';
 /**

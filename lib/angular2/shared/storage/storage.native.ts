@@ -1,4 +1,3 @@
-/* tslint:disable */
 import * as AppSettings from 'application-settings';
 import { Injectable } from '@angular/core';
 /**
