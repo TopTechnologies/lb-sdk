@@ -25082,7 +25082,7 @@
 	    key: 'authenticate',
 	    value: function authenticate(url, headers) {
 	      if (this.auth.getAccessTokenId()) {
-	        headers.Authorization = _lb.LoopBackConfig.getAuthPrefix() + this.auth.getAccessTokenId();
+	        headers['X-Access-Token'] = _lb.LoopBackConfig.getAuthPrefix() + this.auth.getAccessTokenId();
 	      }
 	    }
 	    /**
